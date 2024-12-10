@@ -24,7 +24,7 @@ import { MdOutlineFeedback } from "react-icons/md";
 
 function Sidebar() {
   return (
-    <div className="w-60 h-100 bg-white p-4">
+    <div className=" sidebar w-60 h-100 bg-white p-4">
       {/* Home Section */}
       <div className="flex items-center space-x-4 p-2 hover:bg-gray-200 cursor-pointer rounded">
         <IoMdHome className="text-xl" />
@@ -41,6 +41,10 @@ function Sidebar() {
       <hr className="my-4" />
 
       {/* Library Section */}
+      <div className="flex items-center space-x-2">
+        <h1 className="font-bold text-xl">You</h1>
+        <FaAngleRight />
+      </div>
       <div className="flex items-center space-x-4 p-2 hover:bg-gray-200 cursor-pointer rounded">
         <GoHistory className="text-xl" />
         <h1 className="text-base font-medium">History</h1>
@@ -64,7 +68,7 @@ function Sidebar() {
       <hr className="my-4" />
 
       {/* Explore Section */}
-      <h1 className="text-sm font-semibold text-gray-500 mb-2">Explore</h1>
+      <h1 className="text-xl font-bold  mb-2">Explore</h1>
       <div className="flex items-center space-x-4 p-2 hover:bg-gray-200 cursor-pointer rounded">
         <RiShoppingBag4Line className="text-xl" />
         <h1 className="text-base font-medium">Shopping</h1>
@@ -104,9 +108,7 @@ function Sidebar() {
       <hr className="my-4" />
 
       {/* More from YouTube Section */}
-      <h1 className="text-sm font-semibold text-gray-500 mb-2">
-        More from YouTube
-      </h1>
+      <h1 className="text-xl font-bold  mb-2">More from YouTube</h1>
       <div className="flex items-center space-x-4 p-2 hover:bg-gray-200 cursor-pointer rounded">
         <FaYoutube className="text-xl text-red-600" />
         <h1 className="text-base font-medium">YouTube Premium</h1>
