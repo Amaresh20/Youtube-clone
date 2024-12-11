@@ -23,12 +23,16 @@ function Header() {
   return (
     <>
       {isSearchOpen ? (
-        <div>
+        <div className="flex justify-center space-x-4 w-[450px] h-[60px] items-center mt-3">
           <div>
-            <IoMdArrowBack onClick={closeSearchIcon} />
+            <IoMdArrowBack className="text-xl" onClick={closeSearchIcon} />
           </div>
-          <div className="border-2 border-gray-400">
-            <input type="text" />
+          <div className="">
+            <input
+              type="text"
+              placeholder="Search"
+              className="header-input border-2 border-gray-400 w-[250px]  rounded-3xl p-2 text-xl  "
+            />
           </div>
         </div>
       ) : (

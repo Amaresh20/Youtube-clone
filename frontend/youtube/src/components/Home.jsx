@@ -5,12 +5,12 @@ function Home() {
   const [homeData, setHomeData] = useState(youtubeData);
 
   return (
-    <div className="grid-container grid grid-cols-3 gap-5 mx-5">
+    <div className="grid-container grid grid-cols-3 gap-4 mx-5">
       {homeData.map((data) => {
         return (
-          <div key={data.id} className=" card h-[450px] hover:cursor-pointer">
+          <div key={data.id} className=" card h-[420px] hover:cursor-pointer">
             <img
-              src={data.thumbnail}
+              src={data.thumbnailUrl}
               alt=""
               srcset=""
               className=" thumbnail h-[300px] w-[100%] rounded-lg hover:rounded-none"
@@ -19,7 +19,7 @@ function Home() {
               {data.title}
             </p>
             <p className="card-info text-sm text-gray-600 font-sans">
-              {data.owner}
+              {data.uploader}
             </p>
             <p className="card-info text-sm text-gray-600 font-sans">
               {data.views}

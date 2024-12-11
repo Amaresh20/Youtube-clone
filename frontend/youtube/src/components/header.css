@@ -1,11 +1,11 @@
 @media (max-width: 480px) {
-  .header {
-    border: 2px solid red;
-  }
   .search-btn {
     display: block;
   }
   .search {
+    display: none;
+  }
+  .sidebar {
     display: none;
   }
 }
