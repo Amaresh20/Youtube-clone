@@ -1,18 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { youtubeData } from "../utils/mockData";
 import "./home.css";
-function Home() {
-  const [homeData, setHomeData] = useState(youtubeData);
+import FilterButton from "./FilterButton";
+function Home(props) {
+  const { inputValue } = props;
 
+  const [homeData, setHomeData] = useState(youtubeData);
+  useEffect(() => {
+    if (inputValue) {
+      let filteredInputData = youtubeData.filter((data) => {
+        return data.title.toLowerCase().includes(inputValue.toLowerCase());
+      });
+      setHomeData(filteredInputData);
+    } else {
+      setHomeData(youtubeData);
+    }
+  }, [inputValue]);
   return (
     <>
       <div className="flex flex-col">
-        <h1 className="bg-red-400">filter button</h1>
+        <FilterButton filterFunc={setHomeData} />
         <div className="grid-container grid grid-cols-3 gap-4 mx-5">
           {homeData.map((data) => {
             return (
               <div
-                key={data.id}
+                key={data.videoId}
                 className=" card h-[420px] hover:cursor-pointer"
               >
                 <img

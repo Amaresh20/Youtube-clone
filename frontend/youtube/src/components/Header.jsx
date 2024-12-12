@@ -11,6 +11,7 @@ import { IoMdArrowBack } from "react-icons/io";
 function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [inputValue, setInputValue] = useState("");
   function handleHamburger() {
     setIsSidebarOpen(!isSidebarOpen);
   }
@@ -20,6 +21,10 @@ function Header() {
   function closeSearchIcon() {
     setIsSearchOpen(false);
   }
+  function handleChange(e) {
+    setInputValue(e.target.value);
+  }
+
   return (
     <>
       {isSearchOpen ? (
@@ -57,6 +62,7 @@ function Header() {
                 className="flex-grow h-10 px-4 py-2 border border-gray-300 rounded-l-full focus:outline-none focus:ring-1 focus:ring-blue-500"
                 type="text"
                 placeholder="Search"
+                onChange={handleChange}
               />
               <button className="flex items-center justify-center h-10 w-16 bg-gray-100 border border-gray-300 rounded-r-full hover:bg-gray-200">
                 <CiSearch className="text-xl" />
@@ -81,12 +87,12 @@ function Header() {
       {isSidebarOpen ? (
         <div className="flex pt-16">
           <ToggleSidebar />
-          <Home />
+          <Home inputValue={inputValue} />
         </div>
       ) : (
         <div className="flex pt-16">
           <Sidebar />
-          <Home />
+          <Home inputValue={inputValue} />
         </div>
       )}
     </>
