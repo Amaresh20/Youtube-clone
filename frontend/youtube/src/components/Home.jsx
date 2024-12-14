@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
+import { useOutletContext } from "react-router-dom";
 import { youtubeData } from "../utils/mockData";
 import "./home.css";
 import FilterButton from "./FilterButton";
-function Home(props) {
-  const { inputValue } = props;
-
+function Home() {
+  const [inputValue] = useOutletContext();
   const [homeData, setHomeData] = useState(youtubeData);
   useEffect(() => {
     if (inputValue) {
@@ -40,7 +40,7 @@ function Home(props) {
                   {data.uploader}
                 </p>
                 <p className="card-info text-sm text-gray-600 font-sans">
-                  {data.views}
+                  {data.views} views
                 </p>
                 <p className="card-info text-sm text-gray-600 font-sans">
                   {data.uploadDate}

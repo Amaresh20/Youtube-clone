@@ -8,21 +8,15 @@ import ToggleSidebar from "./ToggleSidebar";
 import Home from "./Home";
 import "./header.css";
 import { IoMdArrowBack } from "react-icons/io";
-function Header() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+function Header({ handleHamburger, handleChange }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [inputValue, setInputValue] = useState("");
-  function handleHamburger() {
-    setIsSidebarOpen(!isSidebarOpen);
-  }
+
   function handleSearchClick() {
     setIsSearchOpen(true);
   }
   function closeSearchIcon() {
     setIsSearchOpen(false);
-  }
-  function handleChange(e) {
-    setInputValue(e.target.value);
   }
 
   return (
@@ -83,17 +77,6 @@ function Header() {
             </div>
           </div>
         </>
-      )}
-      {isSidebarOpen ? (
-        <div className="flex pt-16">
-          <ToggleSidebar />
-          <Home inputValue={inputValue} />
-        </div>
-      ) : (
-        <div className="flex pt-16">
-          <Sidebar />
-          <Home inputValue={inputValue} />
-        </div>
       )}
     </>
   );
