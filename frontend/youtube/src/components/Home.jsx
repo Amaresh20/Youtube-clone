@@ -3,9 +3,12 @@ import { useOutletContext } from "react-router-dom";
 import { youtubeData } from "../utils/mockData";
 import "./home.css";
 import FilterButton from "./FilterButton";
+import { Link } from "react-router-dom";
+
 function Home() {
   const [inputValue] = useOutletContext();
   const [homeData, setHomeData] = useState(youtubeData);
+
   useEffect(() => {
     if (inputValue) {
       let filteredInputData = youtubeData.filter((data) => {
@@ -16,36 +19,37 @@ function Home() {
       setHomeData(youtubeData);
     }
   }, [inputValue]);
+
   return (
     <>
       <div className="flex flex-col">
-        <FilterButton filterFunc={setHomeData} />
+        <div className="filter-btn">
+          <FilterButton filterFunc={setHomeData} />
+        </div>
         <div className="grid-container grid grid-cols-3 gap-4 mx-5">
           {homeData.map((data) => {
             return (
-              <div
-                key={data.videoId}
-                className=" card h-[420px] hover:cursor-pointer"
-              >
-                <img
-                  src={data.thumbnailUrl}
-                  alt=""
-                  srcset=""
-                  className=" thumbnail h-[300px] w-[100%] rounded-lg hover:rounded-none"
-                />
-                <p className=" card-title text-xl font-bold font-sans">
-                  {data.title}
-                </p>
-                <p className="card-info text-sm text-gray-600 font-sans">
-                  {data.uploader}
-                </p>
-                <p className="card-info text-sm text-gray-600 font-sans">
-                  {data.views} views
-                </p>
-                <p className="card-info text-sm text-gray-600 font-sans">
-                  {data.uploadDate}
-                </p>
-              </div>
+              <Link to={`/view_video/${data.videoId}`} key={data.videoId}>
+                <div className="card  hover:cursor-pointer">
+                  <img
+                    src={data.thumbnailUrl}
+                    alt=""
+                    className="thumbnail  w-[100%] rounded-lg hover:rounded-none"
+                  />
+                  <p className="card-title text-xl font-bold font-sans">
+                    {data.title}
+                  </p>
+                  <p className="card-info text-sm text-gray-600 font-sans">
+                    {data.uploader}
+                  </p>
+                  <p className="card-info text-sm text-gray-600 font-sans">
+                    {data.views} views
+                  </p>
+                  <p className="card-info text-sm text-gray-600 font-sans">
+                    {data.uploadDate}
+                  </p>
+                </div>
+              </Link>
             );
           })}
         </div>
@@ -53,4 +57,5 @@ function Home() {
     </>
   );
 }
+
 export default Home;

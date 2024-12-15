@@ -22,61 +22,64 @@ function Header({ handleHamburger, handleChange }) {
   return (
     <>
       {isSearchOpen ? (
-        <div className="flex justify-center space-x-4 w-[450px] h-[60px] items-center mt-3">
-          <div>
-            <IoMdArrowBack className="text-xl" onClick={closeSearchIcon} />
-          </div>
-          <div className="">
-            <input
-              type="text"
-              placeholder="Search"
-              className="header-input border-2 border-gray-400 w-[250px]  rounded-3xl p-2 text-xl  "
-            />
-          </div>
+        <div className="input-search flex justify-center items-center space-x-4 w-full p-4 bg-white shadow-md fixed top-0 z-50">
+          <IoMdArrowBack
+            className="text-xl cursor-pointer"
+            onClick={closeSearchIcon}
+          />
+          <input
+            type="text"
+            placeholder="Search"
+            onChange={handleChange}
+            className="border-2 border-gray-300 w-[70%] sm:w-[60%] md:w-[50%] rounded-xl p-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
         </div>
       ) : (
-        <>
-          <div className="header flex justify-between items-center px-4 py-2 bg-white fixed top-0 z-40 w-[100%] h-16 ">
-            {/* Left Section */}
-            <div className="flex items-center space-x-4">
+        <div className="header flex justify-between items-center px-4 py-2 bg-white shadow-md fixed top-0 z-50 w-full h-16">
+          {/* Left Section */}
+          <div className="flex items-center space-x-4">
+            <div className="hamburger">
               <RxHamburgerMenu
                 onClick={handleHamburger}
-                className="text-2xl cursor-pointer"
-              />
-              <div className="flex items-center space-x-1">
-                <FaYoutube className="text-red-600 text-3xl" />
-                <h1 className="text-xl font-bold text-gray-800">YouTube</h1>
-              </div>
-              <h5 className="text-xs font-medium text-gray-500 mb-4">IN</h5>
-            </div>
-
-            {/* Search Section */}
-            <div className="search flex items-center flex-grow max-w-3xl">
-              <input
-                className="flex-grow h-10 px-4 py-2 border border-gray-300 rounded-l-full focus:outline-none focus:ring-1 focus:ring-blue-500"
-                type="text"
-                placeholder="Search"
-                onChange={handleChange}
-              />
-              <button className="flex items-center justify-center h-10 w-16 bg-gray-100 border border-gray-300 rounded-r-full hover:bg-gray-200">
-                <CiSearch className="text-xl" />
-              </button>
-            </div>
-            <div>
-              <CiSearch
-                className="search-btn text-xl hidden"
-                onClick={handleSearchClick}
+                className=" text-2xl cursor-pointer text-gray-600 hover:text-gray-800"
               />
             </div>
-            {/* Right Section */}
-            <div className="flex items-center space-x-4">
-              {/* <FaUserCircle className="text-3xl text-gray-600" /> */}
-              <button className="flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition">
-                Sign In
-              </button>
+            <div className="flex items-center space-x-1">
+              <FaYoutube className="text-red-600 text-3xl" />
+              <h1 className="text-xl font-bold text-gray-800">YouTube</h1>
             </div>
+            <h5 className="hidden sm:block text-xs font-medium text-gray-500 mb-4">
+              IN
+            </h5>
           </div>
-        </>
+
+          {/* Search Section */}
+          <div className="hidden sm:flex items-center flex-grow max-w-3xl">
+            <input
+              className="flex-grow h-10 px-4 py-2 border border-gray-300 rounded-l-full focus:outline-none focus:ring-2 focus:ring-blue-400"
+              type="text"
+              placeholder="Search"
+              onChange={handleChange}
+            />
+            <button className="flex items-center justify-center h-10 w-16 bg-gray-100 border border-gray-300 rounded-r-full hover:bg-gray-200">
+              <CiSearch className="text-xl" />
+            </button>
+          </div>
+          <div className="sm:hidden">
+            {/* Search Icon for Mobile */}
+            <CiSearch
+              className="search-btn text-xl text-gray-600 hover:text-gray-800"
+              onClick={handleSearchClick}
+            />
+          </div>
+
+          {/* Right Section */}
+          <div className="flex items-center space-x-4">
+            <button className="flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition">
+              Sign In
+            </button>
+          </div>
+        </div>
       )}
     </>
   );

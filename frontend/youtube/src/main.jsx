@@ -18,7 +18,7 @@ const appRouter = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/view-video/:id",
+        path: "/view_video/:id",
         element: <ViewVideo />,
       },
     ],
