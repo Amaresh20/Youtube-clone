@@ -12,7 +12,7 @@ export const youtubeData = [
     dislikes: "45",
     uploadDate: "1 year ago",
     genre: "Education",
-    videoUrl: "https://www.youtube.com/watch?v=vz1RlUyrc3w&t=61s",
+    videoUrl: "https://www.youtube.com/embed/vz1RlUyrc3w?si=EoW6-AYLUJ7OSc6u",
     comments: [
       {
         commentId: "comment01",
@@ -35,7 +35,7 @@ export const youtubeData = [
     dislikes: "125",
     uploadDate: "3 years ago",
     genre: "Education",
-    videoUrl: "https://www.youtube.com/watch?v=-mJFZp84TIY&t=2s",
+    videoUrl: "https://www.youtube.com/embed/-mJFZp84TIY?si=IlqX9qH2cQguRXL-",
     comments: [
       {
         commentId: "comment02",
@@ -58,7 +58,7 @@ export const youtubeData = [
     dislikes: "8K",
     uploadDate: "3 years ago",
     genre: "Comedy",
-    videoUrl: "https://www.youtube.com/watch?v=-O7a9Oro1KI&t=11s",
+    videoUrl: "https://www.youtube.com/embed/-O7a9Oro1KI?si=d0b8TL1W9V6CtZQQ",
     comments: [
       {
         commentId: "comment03",
@@ -81,7 +81,7 @@ export const youtubeData = [
     dislikes: "5K",
     uploadDate: "2 years ago",
     genre: "Comedy",
-    videoUrl: "https://www.youtube.com/watch?v=220TpHgDfvs&t=1324s",
+    videoUrl: "https://www.youtube.com/embed/220TpHgDfvs?si=GhBKVUvXv12ZDkFf",
     comments: [
       {
         commentId: "comment04",
@@ -104,7 +104,7 @@ export const youtubeData = [
     dislikes: "87",
     uploadDate: "6 hours ago",
     genre: "News",
-    videoUrl: "https://www.youtube.com/watch?v=bQ-idFyWaoA",
+    videoUrl: "https://www.youtube.com/embed/bQ-idFyWaoA?si=4jvkHn4DQx78RE1R",
     comments: [
       {
         commentId: "comment05",
@@ -127,7 +127,7 @@ export const youtubeData = [
     dislikes: "78",
     uploadDate: "14 hours ago",
     genre: "News",
-    videoUrl: "https://www.youtube.com/watch?v=RILJ1FbFLXU",
+    videoUrl: "https://www.youtube.com/embed/VC2woKjgue8?si=xi9IqYFwsMFX0veN",
     comments: [
       {
         commentId: "comment06",
@@ -150,7 +150,7 @@ export const youtubeData = [
     dislikes: "12K",
     uploadDate: "1 year ago",
     genre: "Gaming",
-    videoUrl: "https://www.youtube.com/watch?v=5Cc9MBrvgAo",
+    videoUrl: "https://www.youtube.com/embed/5Cc9MBrvgAo?si=l_EkB0Bu9uB4W1IM",
     comments: [
       {
         commentId: "comment07",
@@ -173,7 +173,7 @@ export const youtubeData = [
     dislikes: "900",
     uploadDate: "1 month ago",
     genre: "Gaming",
-    videoUrl: "https://www.youtube.com/watch?v=lkBlgKFHHxA",
+    videoUrl: "https://www.youtube.com/embed/lkBlgKFHHxA?si=CSCwk93FT7Gx8HZx",
     comments: [
       {
         commentId: "comment08",
@@ -196,7 +196,7 @@ export const youtubeData = [
     dislikes: "680",
     uploadDate: "1 year ago",
     genre: "Travel",
-    videoUrl: "https://www.youtube.com/watch?v=jkviE5AMaFA",
+    videoUrl: "https://www.youtube.com/embed/jkviE5AMaFA?si=wsAfAmoYM1u08utj",
     comments: [
       {
         commentId: "comment09",
@@ -221,7 +221,7 @@ export const youtubeData = [
     dislikes: "680",
     uploadDate: "1 year ago",
     genre: "Travel",
-    videoUrl: "https://www.youtube.com/watch?v=i9cXZK9rQgg",
+    videoUrl: "https://www.youtube.com/embed/i9cXZK9rQgg?si=jJI_ly8knwc72jDa",
     comments: [
       {
         commentId: "comment10",
@@ -246,7 +246,7 @@ export const youtubeData = [
     dislikes: "2.5K",
     uploadDate: "1 month ago",
     genre: "Adventure",
-    videoUrl: "https://www.youtube.com/watch?v=tJBJa_q-4qY",
+    videoUrl: "https://www.youtube.com/embed/tJBJa_q-4qY?si=dIMDNocw5nV92pys",
     comments: [
       {
         commentId: "comment11",
@@ -270,7 +270,7 @@ export const youtubeData = [
     dislikes: "2.5K",
     uploadDate: "2 weeks ago",
     genre: "Adventure",
-    videoUrl: "https://www.youtube.com/watch?v=ZyHWTdXeZ0E",
+    videoUrl: "https://www.youtube.com/embed/ZyHWTdXeZ0E?si=wv0LVpzUpbnxTONh",
     comments: [
       {
         commentId: "comment12",
@@ -293,7 +293,7 @@ export const youtubeData = [
     dislikes: "570",
     uploadDate: "5 months ago",
     genre: "Cricket",
-    videoUrl: "https://www.youtube.com/watch?v=3yiWqnKl7lQ&t=33s",
+    videoUrl: "https://www.youtube.com/embed/3yiWqnKl7lQ?si=5D1AdHZF6zFVeBz1",
     comments: [
       {
         commentId: "comment13",
@@ -316,7 +316,7 @@ export const youtubeData = [
     dislikes: "780",
     uploadDate: "1 month ago",
     genre: "Cricket",
-    videoUrl: "https://www.youtube.com/watch?v=_CFS5uZCcTw",
+    videoUrl: "https://www.youtube.com/embed/_CFS5uZCcTw?si=X8d5UFNtCRK2ocSA",
     comments: [
       {
         commentId: "comment14",
@@ -339,7 +339,7 @@ export const youtubeData = [
     dislikes: "780",
     uploadDate: "5 years ago",
     genre: "Movies",
-    videoUrl: "https://www.youtube.com/watch?v=XpeOIww_l4A",
+    videoUrl: "https://www.youtube.com/embed/XpeOIww_l4A?si=9qVgvrU76R4gtoFT",
     comments: [
       {
         commentId: "comment15",
@@ -364,7 +364,7 @@ export const youtubeData = [
     dislikes: "128K",
     uploadDate: "7 years ago",
     genre: "Movies",
-    videoUrl: "https://www.youtube.com/watch?v=XpeOIww_l4A",
+    videoUrl: "https://www.youtube.com/embed/z4K2F_OALPQ?si=lxkkOEzR8EPhse3r",
     comments: [
       {
         commentId: "comment16",
@@ -388,7 +388,7 @@ export const youtubeData = [
     dislikes: "196K",
     uploadDate: "7 years ago",
     genre: "Music",
-    videoUrl: "https://www.youtube.com/watch?v=2Vv-BfVoq4g",
+    videoUrl: "https://www.youtube.com/embed/2Vv-BfVoq4g?si=bFAtm6JtqVwxfCsp",
     comments: [
       {
         commentId: "comment17",
@@ -412,7 +412,7 @@ export const youtubeData = [
     dislikes: "234K",
     uploadDate: "10 years ago",
     genre: "Music",
-    videoUrl: "https://www.youtube.com/watch?v=syFZfO_wfMQ",
+    videoUrl: "https://www.youtube.com/embed/syFZfO_wfMQ?si=T2DGzSQsoktisSxg",
     comments: [
       {
         commentId: "comment18",
