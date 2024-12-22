@@ -1,5 +1,5 @@
 import youtubeDataModel from "../model/youtubeData.model.js";
-
+//add all youtube data->http post method
 export function fetchAllYoutubeData(req, res) {
   const {
     title,
@@ -36,5 +36,19 @@ export function fetchAllYoutubeData(req, res) {
     })
     .catch((error) => {
       return res.status(505).json({ message: error.message });
+    });
+}
+//get all youtube data ->http get method
+export function getAllYoutubeData(req, res) {
+  youtubeDataModel
+    .find()
+    .then((data) => {
+      if (!data) {
+        return res.status(404).json({ message: "data not found" });
+      }
+      res.send(data);
+    })
+    .catch((error) => {
+      return res.status(500).json({ message: error.message });
     });
 }

@@ -46,7 +46,7 @@ export function login(req, res) {
         accessToken: token,
       });
     })
-    .then((error) => {
+    .catch((error) => {
       return res.status(500).json({ message: error.message });
     });
 }

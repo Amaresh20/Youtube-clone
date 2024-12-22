@@ -1,16 +1,19 @@
 import express from "express";
 import { userRoutes } from "./routes/user.routes.js";
 import mongoose from "mongoose";
-
+import cors from "cors";
 const app = express();
 app.use(express.json());
+app.use(cors());
 userRoutes(app);
-mongoose.connect("mongodb://localhost:27017");
+mongoose.connect(
+  "mongodb+srv://internshala:internshala@cluster0.lota8m5.mongodb.net/"
+);
 const db = mongoose.connection;
-db.on("/open", () => {
-  console.log("database is conneected");
+db.on("open", () => {
+  console.log("database is connected");
 });
-db.on("/error", () => {
+db.on("error", () => {
   console.log("database is no connected");
 });
 
