@@ -7,7 +7,12 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const [inputValue] = useOutletContext();
-  const [homeData, setHomeData] = useState(youtubeData);
+  const [homeData, setHomeData] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/youtube/data")
+      .then((response) => response.json())
+      .then((data) => setHomeData(data));
+  }, []);
 
   useEffect(() => {
     if (inputValue) {
@@ -27,9 +32,9 @@ function Home() {
           <FilterButton filterFunc={setHomeData} />
         </div>
         <div className="grid-container grid grid-cols-3 gap-4 mx-5">
-          {homeData.map((data) => {
+          {homeData.map((data, index) => {
             return (
-              <Link to={`/view_video/${data.videoId}`} key={data.videoId}>
+              <Link to={`/view_video/${data._id}`} key={data._id}>
                 <div className="card  hover:cursor-pointer">
                   <img
                     src={data.thumbnailUrl}

@@ -41,12 +41,12 @@ function App() {
       {isSidebarOpen ? (
         <div className="flex mt-[100px]  ">
           <ToggleSidebar />
-          <Outlet context={[inputValue]} />;
+          <Outlet context={[inputValue]} />
         </div>
       ) : (
         <div className="flex mt-[100px]">
           <Sidebar />
-          <Outlet context={[inputValue]} />;
+          <Outlet context={[inputValue]} />
         </div>
       )}
     </>

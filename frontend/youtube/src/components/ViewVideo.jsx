@@ -1,10 +1,22 @@
 import { useParams } from "react-router-dom";
 import { youtubeData } from "../utils/mockData";
+import { useEffect, useState } from "react";
 
 function ViewVideo() {
+  const [viewVideo, setViewVideo] = useState([]);
   const { id } = useParams(); // Get videoId from the URL
-  const video = youtubeData.find((data) => data.videoId === id); // Find the video data
+
   console.log("id", id);
+
+  useEffect(() => {
+    fetchYoutubeData();
+  }, []);
+  async function fetchYoutubeData() {
+    const result = await fetch("http://localhost:3000/youtube/data");
+    const data = await result.json();
+    setViewVideo(data);
+  }
+  const video = viewVideo.find((data) => data._id === id); // Find the video data
   console.log("video", video);
   if (!video) {
     return <div>Video not found</div>; // Handle case where videoId doesn't exist

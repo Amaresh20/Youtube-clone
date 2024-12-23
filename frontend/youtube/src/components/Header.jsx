@@ -8,17 +8,26 @@ import ToggleSidebar from "./ToggleSidebar";
 import Home from "./Home";
 import "./header.css";
 import { IoMdArrowBack } from "react-icons/io";
+import { Link } from "react-router-dom";
+import Logout from "./Logout";
 
 function Header({ handleHamburger, handleChange }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-
+  const [dropdown, setDropDown] = useState(false);
+  const [token, setToken] = useState(localStorage.getItem("token"));
+  const username = localStorage.getItem("fullName");
+  console.log("username", username);
+  console.log("token", token);
   function handleSearchClick() {
     setIsSearchOpen(true);
   }
   function closeSearchIcon() {
     setIsSearchOpen(false);
   }
-
+  //for dropdown
+  function handleDropDown() {
+    setDropDown(!dropdown);
+  }
   return (
     <>
       {isSearchOpen ? (
@@ -74,11 +83,25 @@ function Header({ handleHamburger, handleChange }) {
           </div>
 
           {/* Right Section */}
-          <div className="flex items-center space-x-4">
-            <button className="flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition">
-              Sign In
-            </button>
-          </div>
+          {token ? (
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={handleDropDown}
+                className="flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition"
+              >
+                {username.slice(0, 1).toUpperCase()}
+              </button>
+              {dropdown ? <Logout token={token} tokenFunc={setToken} /> : null}
+            </div>
+          ) : (
+            <div className="flex items-center space-x-4">
+              <Link to="/signup">
+                <button className="flex items-center px-4 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition">
+                  Sign Up
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
       )}
     </>

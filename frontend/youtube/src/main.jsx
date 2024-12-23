@@ -7,6 +7,8 @@ import { RouterProvider } from "react-router-dom";
 import ViewVideo from "./components/ViewVideo.jsx";
 import Error from "./components/Error.jsx";
 import Home from "./components/Home.jsx";
+import Signup from "./components/Signup.jsx";
+import Login from "./components/Login.jsx";
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +24,14 @@ const appRouter = createBrowserRouter([
         element: <ViewVideo />,
       },
     ],
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   },
 ]);
 createRoot(document.getElementById("root")).render(
