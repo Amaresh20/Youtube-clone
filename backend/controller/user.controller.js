@@ -35,9 +35,7 @@ export function login(req, res) {
       if (!validPassword) {
         return res.status(404).json({ message: "password is not valid" });
       }
-      const token = jwt.sign({ id: data._id }, "secretKey", {
-        expiresIn: "30m",
-      });
+      const token = jwt.sign({ id: data._id }, "secretKey");
       res.send({
         user: {
           email: data.email,

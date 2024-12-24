@@ -12,6 +12,7 @@ export function fetchAllYoutubeData(req, res) {
     uploadDate,
     genre,
     videoUrl,
+    comments,
   } = req.body;
 
   const newYoutubeData = new youtubeDataModel({
