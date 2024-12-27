@@ -24,7 +24,7 @@ import { MdOutlineFeedback } from "react-icons/md";
 import { Link } from "react-router-dom";
 function Sidebar() {
   return (
-    <div className=" sidebar w-60 h-100 bg-white p-4">
+    <div className=" sidebar w-60 h-[90vh] overflow-y-scroll bg-white p-4">
       {/* Home Section */}
       <Link to="/">
         <div className="flex items-center space-x-4   p-2 hover:bg-gray-200 cursor-pointer rounded">
