@@ -36,7 +36,7 @@ function Logout(props) {
             <div>
               <h1>{username.slice(0, 1).toUpperCase() + username.slice(1)}</h1>
               <h1>{userEmail}</h1>
-              <Link to="/channelDetails">
+              <Link to="/channel-details">
                 <h1 className="text-[#3d3aee] hover:text-[#ff0000] cursor-pointer font-medium">
                   View Your Channel
                 </h1>

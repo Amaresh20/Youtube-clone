@@ -21,15 +21,17 @@ import { SiYoutubestudio, SiYoutubemusic, SiYoutubekids } from "react-icons/si";
 import { CiSettings, CiFlag1 } from "react-icons/ci";
 import { IoMdHelpCircleOutline } from "react-icons/io";
 import { MdOutlineFeedback } from "react-icons/md";
-
+import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <div className=" sidebar w-60 h-100 bg-white p-4">
       {/* Home Section */}
-      <div className="flex items-center space-x-4 p-2 hover:bg-gray-200 cursor-pointer rounded">
-        <IoMdHome className="text-xl" />
-        <h1 className="text-base font-medium">Home</h1>
-      </div>
+      <Link to="/">
+        <div className="flex items-center space-x-4   p-2 hover:bg-gray-200 cursor-pointer rounded">
+          <IoMdHome className="text-xl" />
+          <h1 className="text-base font-medium">Home</h1>
+        </div>
+      </Link>
       <div className="flex items-center space-x-4 p-2 hover:bg-gray-200 cursor-pointer rounded">
         <SiYoutubeshorts className="text-xl" />
         <h1 className="text-base font-medium">Shorts</h1>

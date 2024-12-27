@@ -57,7 +57,7 @@ function Login() {
     }
   }
   return (
-    <div className="h-screen flex items-center justify-center bg-pink-600 w-full m-auto mt-[10px]">
+    <div className="h-screen flex items-center justify-center bg-gray-400 w-full m-auto mt-[10px]">
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md ">
         <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">
           Log In to YouTube

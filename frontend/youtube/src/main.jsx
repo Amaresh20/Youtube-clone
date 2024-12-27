@@ -9,6 +9,7 @@ import Error from "./components/Error.jsx";
 import Home from "./components/Home.jsx";
 import Signup from "./components/Signup.jsx";
 import Login from "./components/Login.jsx";
+import ChannelDetails from "./components/ChennelDetails.jsx";
 const appRouter = createBrowserRouter([
   {
     path: "/",
@@ -22,6 +23,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/view_video/:id",
         element: <ViewVideo />,
+      },
+      {
+        path: "/channel-details",
+        element: <ChannelDetails />,
       },
     ],
   },
