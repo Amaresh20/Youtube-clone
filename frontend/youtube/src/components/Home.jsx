@@ -33,7 +33,7 @@ function Home() {
           <FilterButton filterFunc={setHomeData} />
         </div>
         {homeData.length > 0 ? (
-          <div className="grid-container grid grid-cols-3 gap-4 mx-5">
+          <div className="grid-container grid grid-cols-3 gap-4 mx-5 ">
             {homeData.map((data, index) => {
               return (
                 <Link to={`/view_video/${data._id}`} key={data._id}>

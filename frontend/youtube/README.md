@@ -31,3 +31,7 @@ This is a youtube clone project which i have built using modern technologies lik
 ## Github Link:-
 
 https://github.com/Amaresh20/Youtube-clone
+
+## Deployed link:-
+
+https://youtube-clone-2zoq.vercel.app/

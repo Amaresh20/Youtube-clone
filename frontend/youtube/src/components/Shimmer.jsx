@@ -3,12 +3,12 @@ function Shimmer() {
   console.log("itemArr", itemArr);
   return (
     <>
-      <div className="grid-container grid grid-cols-3 gap-4 mx-5 bg-green-300">
+      <div className=" grid-container grid grid-cols-3 gap-4 mx-5 w-[900px]">
         {itemArr.map((item, index) => {
           return (
             <div
               key={index}
-              className="border-2 border-red-200 h-[300px]"
+              className="bg-gray-200 rounded-lg h-[300px] w-[450px]"
             ></div>
           );
         })}
