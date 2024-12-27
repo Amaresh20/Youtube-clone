@@ -14,15 +14,15 @@ This is a youtube clone project which i have built using modern technologies lik
 
 #### Frontend:-
 
--React.
--Tailwind.
+- React.
+- Tailwind.
 
 #### Backend:-
 
--Node js.
--Express js.
--Mongo db.
--JWT.
+- Node js.
+- Express js.
+- Mongo db.
+- JWT.
 
 #### Tools:-
 
