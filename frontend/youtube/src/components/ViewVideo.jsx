@@ -19,20 +19,25 @@ function ViewVideo() {
 
   // Fetch video data
   async function fetchYoutubeData() {
-    const result = await fetch("http://localhost:3000/youtube/data");
+    const result = await fetch(
+      "https://youtube-clone-1-nt3e.onrender.com/youtube/data"
+    );
     const data = await result.json();
     setViewVideo(data);
   }
   //fetch comment
   async function fetchYoutubeComments() {
-    const result = await fetch("http://localhost:3000/get-comment", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `JWT ${localStorage.getItem("token")}`, // Pass token from local storage
-      },
-      body: JSON.stringify({ videoId: id }),
-    });
+    const result = await fetch(
+      "https://youtube-clone-1-nt3e.onrender.com/get-comment",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `JWT ${localStorage.getItem("token")}`, // Pass token from local storage
+        },
+        body: JSON.stringify({ videoId: id }),
+      }
+    );
     const data = await result.json();
     setComments(data.data);
   }
@@ -53,14 +58,17 @@ function ViewVideo() {
       description: commentText,
     };
 
-    const response = await fetch("http://localhost:3000/add-comment", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `JWT ${localStorage.getItem("token")}`, // Pass token from local storage
-      },
-      body: JSON.stringify(commentData),
-    });
+    const response = await fetch(
+      "https://youtube-clone-1-nt3e.onrender.com/add-comment",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `JWT ${localStorage.getItem("token")}`, // Pass token from local storage
+        },
+        body: JSON.stringify(commentData),
+      }
+    );
 
     const data = await response.json();
     if (data) {
@@ -69,7 +77,7 @@ function ViewVideo() {
   }
   async function handleDeleteComment(commentId) {
     const response = await fetch(
-      `http://localhost:3000/delete-comment/${commentId}`,
+      `https://youtube-clone-1-nt3e.onrender.com/delete-comment/${commentId}`,
       {
         method: "DELETE",
         headers: {
@@ -90,7 +98,7 @@ function ViewVideo() {
   }
   async function handleSaveComment() {
     const response = await fetch(
-      `http://localhost:3000/edit-comment/${editComment._id}`,
+      `https://youtube-clone-1-nt3e.onrender.com/edit-comment/${editComment._id}`,
       {
         method: "PUT",
         headers: {

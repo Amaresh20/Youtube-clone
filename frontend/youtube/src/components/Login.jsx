@@ -26,16 +26,19 @@ function Login() {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: userDetails.email,
-          password: userDetails.password,
-        }),
-      });
+      const response = await fetch(
+        "https://youtube-clone-1-nt3e.onrender.com/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: userDetails.email,
+            password: userDetails.password,
+          }),
+        }
+      );
       console.log("response", response);
       if (!response.ok) {
         let errorText = await response.json(); // Get error message from response (if any)
