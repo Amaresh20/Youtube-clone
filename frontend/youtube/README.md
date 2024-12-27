@@ -34,4 +34,4 @@ https://github.com/Amaresh20/Youtube-clone
 
 ## Deployed link:-
 
-https://youtube-clone-2zoq.vercel.app/
+https://youtube-clone-1iax.vercel.app/
