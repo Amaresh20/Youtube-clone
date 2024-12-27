@@ -17,7 +17,7 @@ export function userRoutes(app) {
   app.post("/youtube/data", fetchAllYoutubeData);
   app.get("/youtube/data", getAllYoutubeData);
   app.post("/add-comment", verifyToken, addComment);
-  app.post("/get-comment", verifyToken, getComment);
+  app.post("/get-comment", getComment);
   app.delete("/delete-comment/:id", verifyToken, deleteComment);
   app.put("/edit-comment/:id", verifyToken, updateComment);
 }
